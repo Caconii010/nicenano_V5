@@ -1,8 +1,8 @@
-
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/rgb.h>
 
 / {
     behaviors {
@@ -61,6 +61,20 @@
             #binding-cells = <0>;
             bindings = <&kp Q>, <&rgb_ug RGB_TOG>;
         };
+
+        new_behavior: new_behavior {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NEW_BEHAVIOR";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_SHIFT>, <&kp CAPSLOCK>;
+        };
+
+        new_behavior: new_behavior {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NEW_BEHAVIOR";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_SHIFT>, <&kp CAPSLOCK>;
+        };
     };
 
     keymap {
@@ -74,9 +88,9 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESCAPE  &rgb_left  &kp W  &kp E             &kp R  &kp T        &kp Y      &kp U  &kp I     &kp O  &rgb_right  &kp BSPC
-&mayuscula  &kp A      &kp S  &kp D             &kp F  &kp G        &kp H      &kp J  &kp K     &kp L  &commadot   &comillas
-&kp LSHFT   &kp Z      &kp X  &kp C             &kp V  &kp B        &kp N      &kp M  &comma    &dot   &slash      &kp ENTER
+&kp ESCAPE  &rgb_left  &kp W  &kp E             &kp R  &kp T        &kp Y      &kp U  &kp I     &kp O  &kp P      &kp BSPC
+&kp TAB     &kp A      &kp S  &kp D             &kp F  &kp G        &kp H      &kp J  &kp K     &kp L  &commadot  &comillas
+&mayuscula  &kp Z      &kp X  &kp C             &kp V  &kp B        &kp N      &kp M  &comma    &dot   &slash     &kp ENTER
                               &kp LEFT_CONTROL  &mo 1  &kp SPACE    &kp SPACE  &mo 2  &kp RALT
             >;
         };
