@@ -1,50 +1,9 @@
-layout: {qmk_keyboard: corne_rotated, qmk_layout: LAYOUT_split_3x6_3}
+layout: {zmk_keyboard: corne}
 layers:
-  BASE:
-  - {t: TAB, h: LC(LS(LALT))}
-  - Q
-  - W
-  - E
-  - R
-  - T
-  - Y
-  - U
-  - I
-  - O
-  - P
-  - '-'
-  - LSHIFT
-  - A
-  - S
-  - D
-  - F
-  - G
-  - H
-  - J
-  - K
-  - L
-  - ;
-  - ''''
-  - LEFT CONTROL
-  - Z
-  - X
-  - C
-  - V
-  - B
-  - N
-  - M
-  - ','
-  - .
-  - /
-  - LEFT ALT
-  - LEFT GUI
-  - NAV
-  - BSPC
-  - SPACE
-  - SYMBOLS
-  - ENTER
-  SYMBOLS:
-  - {t: ▽, type: trans}
+  default: [ESCAPE, '&rgb_left', W, E, R, T, Y, U, I, O, '&rgb_right', BSPC, '&mayuscula', A, S, D, F, G, H, J, K, L, '&commadot', '&comillas', LSHFT, Z, X, C, V,
+    B, N, M, '&comma', '&dot', '&slash', ENTER, LEFT CONTROL, lower, SPACE, SPACE, raise, RALT]
+  lower:
+  - ESC
   - '1'
   - '2'
   - '3'
@@ -55,8 +14,39 @@ layers:
   - '8'
   - '9'
   - '0'
+  - BSPC
+  - BT CLR
+  - {t: BT, h: '0'}
+  - {t: BT, h: '1'}
+  - {t: BT, h: '2'}
+  - {t: BT, h: '3'}
+  - {t: BT, h: '4'}
+  - RGB EFF
+  - RGB SPI
+  - RGB BRI
+  - PG UP
+  - UP ARROW
+  - PAGE DOWN
+  - LSHFT
   - {t: ▽, type: trans}
-  - ESC
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - EP TOG
+  - RGB EFR
+  - RGB SPD
+  - RGB BRD
+  - LEFT ARROW
+  - DOWN ARROW
+  - RIGHT ARROW
+  - LGUI
+  - {type: held}
+  - SPACE
+  - SPACE
+  - {t: ▽, type: trans}
+  - RALT
+  raise:
+  - TAB
   - '!'
   - '@'
   - '#'
@@ -67,117 +57,34 @@ layers:
   - '*'
   - (
   - )
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - '`'
-  - '~'
-  - '|'
-  - '='
-  - +
-  - '['
-  - ']'
-  - '{'
-  - '}'
-  - \
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {type: held}
-  - {t: ▽, type: trans}
-  NAV:
-  - LG(LC(TAB))
-  - {t: ▽, type: trans}
-  - LG(LEFT BRACKET)
-  - LS(TAB)
-  - TAB
-  - LG(RIGHT BRACKET)
-  - LA(LEFT)
-  - LA(DOWN)
-  - LA(UP)
-  - LA(RIGHT)
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - ESC
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - SCROLL DOWN
-  - SCROLL UP
-  - {t: ▽, type: trans}
-  - LEFT
-  - DOWN
-  - UP
-  - RIGHT
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - HOME
-  - PG DN
-  - PG UP
-  - END
-  - LG(LEFT)
-  - LG(DOWN)
-  - LG(UP)
-  - LG(RIGHT)
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {type: held}
-  - {t: ▽, type: trans}
-  - LC(LG(SPACE))
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  EXT:
-  - {t: ▽, type: trans}
+  - BSPC
   - F1
   - F2
   - F3
   - F4
   - F5
   - F6
+  - '-'
+  - '='
+  - '['
+  - ']'
+  - \
+  - '`'
   - F7
   - F8
   - F9
   - F10
+  - F11
   - F12
-  - PP
-  - PREV
-  - NEXT
-  - MUTE
-  - VOL DN
-  - VOL UP
-  - BRIGHTNESS DEC
-  - BRIGHTNESS INC
+  - _
+  - +
+  - '{'
+  - '}'
+  - '|'
+  - '~'
+  - LGUI
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: BT, h: '0'}
-  - {t: BT, h: '1'}
-  - {t: BT, h: '2'}
-  - {t: BT, h: '3'}
-  - {t: BT, h: '4'}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - SPACE
+  - RET
   - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {type: held}
-  - {t: ▽, type: trans}
-combos:
-- p: [0, 38, 5]
-  k: BT CLR
-- p: [29, 28]
-  k: SPACE
-- p: [17, 16]
-  k: ENTER
-- p: [5, 6]
-  k: CLCK
+  - RALT
