@@ -10,7 +10,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "MAYUSCULA";
             #binding-cells = <0>;
-            bindings = <&kp TAB>, <&kp CAPSLOCK>;
+            bindings = <&kp LEFT_SHIFT>, <&kp CAPSLOCK>;
         };
 
         comma: comma {
@@ -62,12 +62,6 @@
             bindings = <&kp Q>, <&rgb_ug RGB_TOG>;
         };
 
-        new_behavior: new_behavior {
-            compatible = "zmk,behavior-tap-dance";
-            label = "NEW_BEHAVIOR";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_SHIFT>, <&kp CAPSLOCK>;
-        };
     };
 
     keymap {
