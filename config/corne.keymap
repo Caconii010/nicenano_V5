@@ -1,8 +1,4 @@
-#include <dt-bindings/zmk/rgb.h>
-
-&led_strip {
-    chain-length = <27>;
-};
+&led_strip { chain-length = <27>; };
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
@@ -60,6 +56,13 @@
             #binding-cells = <0>;
             bindings = <&kp Q>, <&rgb_ug RGB_TOG>;
         };
+
+        luz_izquierda: luz_izquierda {
+            compatible = "zmk,behavior-tap-dance";
+            label = "LUZ_IZQUIERDA";
+            #binding-cells = <0>;
+            bindings = <&kp Y>, <&rgb_ug RGB_TOG>;
+        };
     };
 
     keymap {
@@ -73,10 +76,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESCAPE  &luces  &kp W  &kp E             &kp R  &kp T        &kp Y      &kp U  &kp I     &kp O  &kp P      &kp BSPC
-&kp TAB     &kp A   &kp S  &kp D             &kp F  &kp G        &kp H      &kp J  &kp K     &kp L  &commadot  &comillas
-&mayuscula  &kp Z   &kp X  &kp C             &kp V  &kp B        &kp N      &kp M  &comma    &dot   &slash     &kp ENTER
-                           &kp LEFT_CONTROL  &mo 1  &kp SPACE    &kp SPACE  &mo 2  &kp RALT
+&kp ESCAPE  &luces  &kp W  &kp E             &kp R  &kp T        &luz_izquierda  &kp U  &kp I     &kp O  &kp P      &kp BSPC
+&kp TAB     &kp A   &kp S  &kp D             &kp F  &kp G        &kp H           &kp J  &kp K     &kp L  &commadot  &comillas
+&mayuscula  &kp Z   &kp X  &kp C             &kp V  &kp B        &kp N           &kp M  &comma    &dot   &slash     &kp ENTER
+                           &kp LEFT_CONTROL  &mo 1  &kp SPACE    &kp SPACE       &mo 2  &kp RALT
             >;
         };
 
